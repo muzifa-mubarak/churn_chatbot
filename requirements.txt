@@ -1,0 +1,14 @@
+fastapi
+pandas
+numpy
+requests
+uvicorn
+scikit-learn
+python-multipart
+google-generativeai
+gradio
+transformers
+langchain 
+langchain-core  
+langchain-google-genai
+twilio
