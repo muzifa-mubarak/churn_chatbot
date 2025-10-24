@@ -11,7 +11,7 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)  # Replace with your actual key
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = os.getenv("API_URL", "https://your-backend-service.onrender.com/predict")
 
 # ---- Global variable to store uploaded CSV for chatbot context ----
 csv_context = None
@@ -98,5 +98,6 @@ with gr.Blocks(theme=gr.themes.Soft()) as ui:
             title="Ask ChurnGuard",
             textbox=gr.Textbox(placeholder="Ask about churn patterns, customer insights...", lines=1)
         )
+
 
 ui.launch()
