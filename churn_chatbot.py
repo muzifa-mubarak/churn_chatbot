@@ -14,7 +14,7 @@ genai.configure(api_key=api_key)
 
 # ---- Use your FastAPI backend URL (Render will call this endpoint) ----
 # For local testing: API_URL = "http://127.0.0.1:8000/predict"
-API_URL = os.getenv("API_URL", "https://your-backend-service.onrender.com/predict")
+API_URL = os.getenv("API_URL", "https://churn_chatbot.onrender.com/predict")
 
 # ---- Global variable to store uploaded CSV ----
 csv_context = None
@@ -101,3 +101,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as ui:
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 7860))
     ui.launch(server_name="0.0.0.0", server_port=port)
+
